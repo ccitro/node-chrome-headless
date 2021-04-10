@@ -1,5 +1,7 @@
 FROM node:10
 
+ENV CACHE_BUSTER 20210329
+
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y gconf-service libasound2 libatk1.0-0 libc6 \
