@@ -16,4 +16,6 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     mkdir -p /home/node/app
 
+RUN npm i -g pnpm@6.15
+
 WORKDIR /home/node/app
