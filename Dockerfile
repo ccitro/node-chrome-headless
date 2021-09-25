@@ -1,6 +1,6 @@
 FROM node:14
 
-ENV CACHE_BUSTER 20210718
+ENV CACHE_BUSTER 20210925
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -13,4 +13,7 @@ RUN apt-get update && \
     lsb-release xdg-utils wget && \
     apt-get autoremove -y && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+    mkdir -p /home/node/app
+
+WORKDIR /home/node/app
