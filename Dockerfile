@@ -1,6 +1,6 @@
 FROM node:14
 
-ENV CACHE_BUSTER 20220206
+ENV CACHE_BUSTER 20220213
 
 RUN apt-get update && \
     apt-get upgrade -y && \
