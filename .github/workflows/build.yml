@@ -56,3 +56,6 @@ jobs:
             ghcr.io/${{ github.repository }}:latest-${{ steps.current-time.outputs.formattedTime }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
+          
+      - name: Keepalive
+        uses: gautamkrishnar/keepalive-workflow@v1
